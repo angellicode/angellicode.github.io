@@ -7,27 +7,29 @@
 
 <embed src="March.mp3" loop="true" hidden="true" autostart="true">
 
-<div class="game">	
+<div id="game"class="game">	
+	<img style="width: 800px; height:600px;"id="sky" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/sky.png"/>
 	<div id="blocky" class="blocky">
 	</div>
 	
 	<div class="ground">
-		<button class="button" style="position: absolute; top:70%;" onclick="moveBlocky()">Move</button>
-		<button class="button" style="position: absolute; left: 20%; top: 70%;">Jump</button>
+		<!--<button id="move" class="button" style="position: absolute; top:70%;" onClick="moveBlocky();" >Move</button>-->
+		<button class="button" style="position: absolute; top: 70%;">Jump</button>
 	</div>
 </div>
 
 <script>
-function moveBlocky(){
-	var block = document.getElementById("blocky");
-	var styleOfBlock = getComputedStyle(block);
-	var i=0;
-	var styleHolder = styleOfBlock.left 
-	for(i < 800){
-		block.style.left=i;
-		i++
-	}
+var i=0;
+var obj = document.getElementById("blocky");
+var sky_moving = document.getElementById("sky");
+function scrollSky(){
 	
+}
+//obselete
+function moveBlocky(){
+setTimeout(function(){
+	obj.style.left= (i+20);
+	i=i+4;}, 1000);
 }
 </script>
 
