@@ -1,7 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
 body {
 	background-color: lightblue;
 	background-image: url("/code.jpg");
