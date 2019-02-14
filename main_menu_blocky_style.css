@@ -1,0 +1,78 @@
+body {
+	background-color: black;
+}
+
+.gameWindow {
+	position: absolute; 
+	left: 20%; 
+	background-color: orange;
+	width: 800px;
+	height: 600px;
+	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/blocky_menu.gif");
+}
+
+.about {
+	position: absolute; 
+	left: 20%; 
+	background-color: red;
+	width: 800px;
+	height: 600px;
+	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/blocky_menu.gif");
+}
+
+.game {
+	position: absolute; 
+	left: 20%; 
+	background-color: orange;
+	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/sky.png");
+	width: 800px;
+	height: 600px;
+}
+
+.ground {  
+	top:67%;
+	position: absolute;
+	background-color: seagreen;
+	width: 800px;
+	height: 200px;
+	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/ground.png");
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button {
+	background-color: red;
+	color: white;
+	font-size: 20px;
+	padding: 10px 15px;
+	width: 130px;
+	text-decoration: none;
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+
+.blocky {
+	background-color: red;
+	width: 50px;
+	height: 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: absolute;
+	left:5%;
+	top: 58.9%;
+	
+}
+
+.button:hover {
+	background-color: #FFC38D;
+	animation: fadeB 0.5s;
+}
+
+@keyframes fadeB {
+	0% {opacity: 0.5;}
+	100% {opacity: 1;}
+}
+
+h3 {	
+	font-family: Arial, sans-serif;	
+	color: white;
+	font-size: 30px;
+}

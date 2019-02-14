@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Blocky Survives! 2 - Online Game</title>
+	<link rel="stylesheet" href="main_menu_blocky_style.css"/>
+</head>
+<body>
+
+<embed src="March.mp3" loop="true" hidden="true" autostart="true">
+
+<div class="game">	
+	<div id="blocky" class="blocky">
+	</div>
+	
+	<div class="ground">
+		<button class="button" style="position: absolute; top:70%;" onclick="moveBlocky()">Move</button>
+		<button class="button" style="position: absolute; left: 20%; top: 70%;">Jump</button>
+	</div>
+</div>
+
+<script>
+function moveBlocky(){
+	var block = document.getElementById("blocky");
+	var styleOfBlock = getComputedStyle(block);
+	var i=0;
+	var styleHolder = styleOfBlock.left 
+	for(i < 800){
+		block.style.left=i;
+		i++
+	}
+	
+}
+</script>
+
+</body>
+</html>
