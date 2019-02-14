@@ -8,7 +8,7 @@ body {
 	background-color: orange;
 	width: 800px;
 	height: 600px;
-	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/blocky_menu.gif");
+	background-image: url("/blocky_menu.gif");
 }
 
 .about {
@@ -17,14 +17,14 @@ body {
 	background-color: red;
 	width: 800px;
 	height: 600px;
-	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/blocky_menu.gif");
+	background-image: url("/blocky_menu.gif");
 }
 
 .game {
 	position: absolute; 
 	left: 20%; 
 	background-color: orange;
-	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/sky.png");
+	background-image: url("/sky.png");
 	width: 800px;
 	height: 600px;
 }
@@ -35,7 +35,7 @@ body {
 	background-color: seagreen;
 	width: 800px;
 	height: 200px;
-	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/ground.png");
+	background-image: url("/ground.png");
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
