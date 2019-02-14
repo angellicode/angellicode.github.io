@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>AngelliCode - Angellica Brown's Portfolio</title>
+	<link rel="stylesheet" href="about_style.css"/>
+	<link rel="icon" href="C:/Users/School234/Documents/GitHub/angellicode.github.io/favicon.png">
+</head>
+<body>
+
+<div class="bgGreen">
+	<h1 id="logo" style="float:left; position: relative;z-index: 1; font-size:90px;"></h1>
+	<img class="cur" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/imgs/cursor_small.png"/>
+</div>
+
+<div class="aboutBox">
+	<h2 id="aboutWords" style="float:left;font-size:25px;z-index: 1;position:relative;"></h2>
+	<!--<img class="cur" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/imgs/cursor_smallest.png"/>-->
+</div>
+
+<script>
+var LogoWords="About";
+var AboutScript="Angellica Brown is a kind individual who wants to share her passion of technology with the world. She learned what endless possibilities computing had in store when she discovered coding at a young age. Also being an artist, Angellica fell in love with using the computer to create art that can inspire many. She is a firm believer in love, peace and justice. In her spare time, Angellica can be found coding, drawing, doing schoolwork, designing or hanging out with family and friends."
+var i = 0;
+function typeWords(){
+if (i < AboutScript.length ){
+	document.getElementById("logo").innerHTML += LogoWords.charAt(i);
+	document.getElementById("aboutWords").innerHTML += AboutScript.charAt(i);
+	i++;
+	setTimeout(typeWords, 50);
+}
+}
+window.typeWords();
+</script>
+
+<script>
+function viewPeiceOne(){
+	location.replace("C:/Users/School234/Documents/GitHub/angellicode.github.io/portfolio1/START.html");
+}
+</script>
+
+<div class="menu">
+<a href="index.html" style="position: absolute; left: 25%;background-color: #4CAF50;">HOME</a>
+<a href="works.html" style="position: absolute; left: 50%;background-color: #4CAF50;">WORKS</a>
+<a href="about.html" style="position: absolute; right: 25%;background-color: #4CAF50;">ABOUT</a>
+</div>
+
+</body>
+</html>

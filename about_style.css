@@ -1,0 +1,81 @@
+body {
+	background-color: lightblue;
+	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/imgs/code.jpg");
+	overflow-x: hidden;
+}
+
+h1 {	
+	font-family: Courier, sans-serif;	
+	color: white;
+	font-size: 150px;
+}
+h2,h3 {	
+	font-family: Courier, sans-serif;	
+	color: white;
+	font-size: 50px;
+}
+
+
+a {	
+	font-family: Courier,  sans-serif;	
+	color: white;
+	font-size: 30px;
+}
+
+.menu {
+	background-color: rgb(220,20,60);
+	width: 100%;
+	height: 10%;
+	position: fixed;
+	bottom: 0;
+}
+
+@keyframes cursoranim {
+	0%{opacity: 1;}
+	50%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+.cur {
+	animation: cursoranim 2s infinite;
+	position: relative;
+	z-index: 3;
+	float: right;
+	
+}
+
+.bgGreen {
+
+	background-color: rgb(50,205,50,0.5);
+	position: absolute;
+}
+
+.portfolioOne {
+	background-color: rgb(99,227,130,0.8);
+	position: absolute;
+	left: 5%;
+	bottom: 20%;
+	width: 300px;
+	height: 250px;
+}
+
+.portfolioTwo {
+	background-color: rgb(250,232,81,0.8);
+	position: absolute;
+	left: 35%;
+	bottom: 20%;
+	width: 300px;
+	height: 250px;
+}
+
+.portfolioOne:hover {
+	background-color: rgb(99,227,130);
+}
+
+.portfolioTwo:hover {
+	background-color: rgb(250,81,191);
+}
+
+.aboutBox {
+	background-color: rgb(49,108,49,0.8);position:absolute;top:39%;
+}

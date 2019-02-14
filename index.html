@@ -1,13 +1,54 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-	<title>AngelliCode - Angellica's Programming Portfolio</title>
+	<title>AngelliCode - Angellica Brown's Portfolio</title>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="icon" href="C:/Users/School234/Documents/GitHub/angellicode.github.io/favicon.png">
 </head>
-
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages. Ta Da! :)</p>
+
+
+<!--<div class="load" style="z-index:1;">
+	<div class="loadingDot1">L</div>
+	<div class="loadingDot2">O</div>
+	<div class="loadingDot3">A</div>
+	<div class="loadingDot4">D</div>
+</div>
+-->
+
+<div class="bgGreen">
+<div class="titleScreen">
+	<h1 id="logo" style="float:left; position: relative;z-index: 1; font-size:102px;"></h1>
+	<img class="cur" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/imgs/cursor.png"/>
+</div>
+<h2 id="logodesc" style="top:70%;position:absolute;font-size:25px;"></h2>
+</div>
+
+
+
+<script>
+var LogoWords="AngelliCode";
+var DescWords="Angellica's Programming Portfolio"
+var i = 0;
+function typeWords(){
+if (i < DescWords.length ){
+	document.getElementById("logo").innerHTML += LogoWords.charAt(i);
+	document.getElementById("logodesc").innerHTML += DescWords.charAt(i);
+	i++;
+	setTimeout(typeWords, 100);
+}
+}
+
+window.typeWords();
+</script>
+
+
+
+<div class="menu">
+<a href="index.html" style="position: absolute; left: 25%;background-color: #4CAF50;">HOME</a>
+<a href="works.html" style="position: absolute; left: 50%;background-color: #4CAF50;">WORKS</a>
+<a href="about.html" style="position: absolute; right: 25%;background-color: #4CAF50;">ABOUT</a>
+</div>
+
 
 </body>
 </html>

@@ -1,0 +1,463 @@
+<!--CREDIT THE INTERNET FOR TUTORIAL FOR setTimeout FUNCTION, the REST is (C) A.B. 2016 -->
+
+<html>
+
+<title>In a world of stars...</title>
+<style>
+
+body{
+
+	background-image: url("bg.jpg");
+}
+
+
+
+ul {
+
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden; 
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+}
+
+
+li{
+
+
+	float: left;
+	text-align: left;
+	font-family: "Arial", Arial, serif;
+	font-style: italic;
+	align-items: left;
+
+}
+
+
+.barDiv {
+
+   background-color:   #F0F8FF ;
+   float: left;
+   
+
+}
+
+.barDivColor {
+   float: left;
+   transition: background-color 0.5s ease;
+	background-color: #ff6699;
+ 
+}
+
+.barDivColor:hover {
+   float: left;
+   transition: background-color 0.5s ease;
+    background-color:   #F0F8FF ;
+ 
+}
+
+
+li a{ 
+
+	display:inline-block;
+	color: #666;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+
+}
+
+li a:hover {
+	background-color: #ccffff;
+	filter: alpha(opacity=100);
+	
+	
+}
+li a:hover:not(.active) {
+    background-color: #FF33CC;
+
+}
+
+li a.active{
+
+	color: white;
+	background-color:
+#4CAF50;	
+}
+
+ul#Menu li a:hover {
+    background-color: orange;
+}
+
+
+
+.logo{
+	background: url("angelica.png");
+	width: 800px;
+	height: 200px;
+
+}
+
+.div01 {
+
+	display: none;
+
+}
+
+a:hover + .div01 + ul#Menu {
+
+	display: block;
+
+}
+
+
+.mainBox {
+
+	border: 3px solid #ffb3b3;
+	background: #fff;
+	padding: 20px;
+	width: 1009px;
+	height: 700px;
+	overflow: scroll;
+	float: left;
+	margin: 2px;
+	
+
+}
+
+.imgGIF {
+
+
+	border: 4px solid #fff;
+	background-image: url("dress_01.gif");
+	width: 600px;
+	height: 750px;
+	float: right;
+	
+
+}
+
+.divSliderINVISIBLE {
+
+	
+	background: #F0F8FF;
+	text-align: left;
+	display: none;
+
+}
+
+.showNow:hover .divSliderINVISIBLE {
+
+	display: block;
+
+}
+
+.showNow:hover .now {
+
+	display: none;
+
+}
+
+@font-face {
+
+	font-family: angee; src: url("angee.ttf");
+
+}
+
+h1{
+
+	font-family: angee;
+
+}
+
+body {
+
+	width: 100%;
+
+}
+
+/* Code below, credit stackoverflow.com user... also on w3schools.com website...*/
+.dressad {
+
+	-webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+
+}
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+/* End credits */
+
+
+</style>
+<body style="cursor: url('cursor.png'), crosshair;">
+
+
+
+<ul class="barDiv">
+
+	
+	<div class="showNow">
+	<div>
+			<li><a class="barDivColor" href="index.html">Main-Menu</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a class="barDivColor" href="shop.html">My Cart</a></li>
+			<li><a href="contact_us.html">Contact Us</a></li>
+		</div>
+	
+		<div class="divSliderINVISIBLE">
+		
+		<br>
+		<br>
+		<br>
+
+		
+			<li><a href="clothes.html">Clothing index</a></li>
+			
+
+		
+		</div>
+	
+	</div>
+
+	
+</ul>
+
+
+<br>
+
+<br>
+
+<div style="background-image: url('bow.gif');">
+<h1 class="logo"></h1>
+</div>
+
+<div>
+
+
+</div>
+
+</div>
+
+
+	<div class="mainBox" id="dressesBox" style="display: none;" onLoad="javascript: startPage(); " >
+
+
+	<h1 style="font-family: 'arial', 'Arial', 'serif'; text-align: center; ">Welcome to...</h1>
+	
+	<p style="color: #ffbfbf; font-size: 85; text-align: center; font-family: angee;">Angelica</p>
+
+	<p style = "font-size: 35px"><strong>Angelica is a clothing store for teen girls and is dedicated to bringing YOU the hottest fashion trends!</strong></p>
+	<p style = "font-size: 35px"><strong>Just simply take a look at our catalogue! You can Mix-and-Match our unique clothing peices to create your own look.</strong></p>
+	<p style = "font-size: 35px"><strong>Our store has a mass selection of cute accessories to go with any outfit!<br>We have a Jewelry section in our website(and in store), where you can create a new fashion accessory that is uniquely styled by you!</strong></p>
+	
+	<h2>We thank you for visiting our site! Please enjoy,</h2>
+	<h1>Angelica B. </h1>
+	<h3>President and CEO of Angelica clothing stores inc.</h3>
+	
+
+</div>
+
+	
+</div>
+
+<div class="mainBox">
+
+
+	
+	
+	<h1>Only A some of the dresses @ Angelica! see in store for more.</h1>
+	<h2>CLICK ON AN IMAGE TO ENGLARE</h2>
+	
+	<img src="dress/koi.jpg" width="300" height="400" onClick="javascript: enlargenImage1();" id="image1">
+	<p><strong>Sakura Petal Dress $20.99</strong></p>
+	
+	<img src="dress/3.jpg" width="300" height="400" onClick="javascript: enlargenImage2();" id="image2">
+	<p><strong>Blue Dress $15.47</strong></p>
+	
+	<img src="dress/1.jpg" width="300" height="400" onClick="javascript: enlargenImage3();" id="image3">
+	<p><strong>Pink Dress $10.00</strong></p>
+	
+	<img src="dress/large.jpg" width="300" height="400" onClick="javascript: enlargenImage4();" id="image4">
+	<p><strong>Party Blue Dress (in-store only)</strong></p>
+	
+	<img src="dress/k.jpg" width="300" height="400" onClick="javascript: enlargenImage5();" id="image5">
+	<p><strong>Winter Joy dress $12.99</strong></p>
+	
+	
+			<script>
+			
+				function enlargenImage1(){
+				
+					document.getElementById("image1").style.width = "600px";
+					document.getElementById("image1").style.height = "100%";
+					
+					//CREDIT THE INTERNET FOR TUTORIAL FOR setTimeout FUNCTION, the REST is (C) A.B. 2016
+					exitImage = setTimeout(function (){
+					
+						document.getElementById("image1").style.width = "300px";
+						document.getElementById("image1").style.height = "400px";
+					
+					}, 3000);
+					
+				}
+			
+			</script>
+			
+			<script>
+			
+				function enlargenImage2(){
+				
+					document.getElementById("image2").style.width = "600px";
+					document.getElementById("image2").style.height = "100%";
+					
+					exitImage = setTimeout(function (){
+					
+						document.getElementById("image2").style.width = "300px";
+						document.getElementById("image2").style.height = "400px";
+					
+					}, 3000);
+					
+				}
+			
+			</script>
+			
+			<script>
+			
+				function enlargenImage3(){
+				
+					document.getElementById("image3").style.width = "600px";
+					document.getElementById("image3").style.height = "100%";
+					
+					exitImage = setTimeout(function (){
+					
+						document.getElementById("image3").style.width = "300px";
+						document.getElementById("image3").style.height = "400px";
+					
+					}, 3000);
+					
+				}
+			
+			</script>
+			
+			<script>
+			
+				function enlargenImage4(){
+				
+					document.getElementById("image4").style.width = "600px";
+					document.getElementById("image4").style.height = "100%";
+					
+					exitImage = setTimeout(function (){
+					
+						document.getElementById("image4").style.width = "300px";
+						document.getElementById("image4").style.height = "400px";
+					
+					}, 3000);
+					
+				}
+			
+			</script>
+			
+			<script>
+			
+				function enlargenImage5(){
+				
+					document.getElementById("image5").style.width = "600px";
+					document.getElementById("image5").style.height = "100%";
+					
+					exitImage = setTimeout(function (){
+					
+						document.getElementById("image5").style.width = "300px";
+						document.getElementById("image5").style.height = "400px";
+					
+					}, 3000);
+					
+				}
+			
+			</script>
+			
+		<img src="dress/r1.jpg" width="300" height="400" onClick="javascript: enlargenImage6();" id="image6">
+		<p><strong>Classic Romper $26.93</strong></p>
+		
+					<script>
+			
+				function enlargenImage6(){
+				
+					document.getElementById("image6").style.width = "600px";
+					document.getElementById("image6").style.height = "100%";
+					
+					exitImage = setTimeout(function (){
+					
+						document.getElementById("image6").style.width = "300px";
+						document.getElementById("image6").style.height = "400px";
+					
+					}, 3000);
+					
+				}
+			
+			</script>
+			
+						
+		<img src="dress/cute.jpg" width="300" height="400" onClick="javascript: enlargenImage7();" id="image7">
+		<p><strong>Washed-Out Classic Blue cute dress $26.93</strong></p>
+		
+					<script>
+			
+				function enlargenImage7(){
+				
+					document.getElementById("image7").style.width = "600px";
+					document.getElementById("image7").style.height = "100%";
+					
+					exitImage = setTimeout(function (){
+					
+						document.getElementById("image7").style.width = "300px";
+						document.getElementById("image7").style.height = "400px";
+					
+					}, 3000);
+					
+				}
+			
+			</script>
+			
+			
+		<img src="dress/cute2.jpg" width="300" height="400" onClick="javascript: enlargenImage8();" id="image8">
+		<p><strong>Classic Blue cute dress $20.93</strong></p>
+		
+					<script>
+			
+				function enlargenImage8(){
+				
+					document.getElementById("image8").style.width = "600px";
+					document.getElementById("image8").style.height = "100%";
+					
+					exitImage = setTimeout(function (){
+					
+						document.getElementById("image8").style.width = "300px";
+						document.getElementById("image8").style.height = "400px";
+					
+					}, 3000);
+					
+				}
+			
+			</script>
+			
+			
+			
+			
+			
+	
+</div>
+
+</body>
+
+
+</html>

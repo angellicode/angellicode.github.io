@@ -1,0 +1,64 @@
+body {
+	background-color: #3493A6;
+	overflow-x: hidden
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,h2 {
+	font-family: Arial, sans-serif;
+}
+
+.start_button {
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	border: none;
+	width:100px;
+	height: 50px;
+	color: white;
+	background-color: #5BDE75;
+}
+
+.page_main {
+	background-color: #58C8FF; 
+	height: 100vh;
+}
+
+.main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.projectOne {
+	position: absolute;
+}
+
+.website {
+	float: left;
+	width: 500px;
+	height: 400px;
+	margin-right:  100px;
+	margin-left: 50px;
+	margin-bottom: 100px;
+	background-color: lightgreen;
+	transition: 0.4s;
+}
+
+.website:hover {
+	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/imgs/website_snapshot.png");
+}
+
+.app {
+	width: 500px;
+	height: 400px;
+	float: right;
+	background-color: lightgray;
+}
+
+.app:hover {
+	background-color: gray;
+}

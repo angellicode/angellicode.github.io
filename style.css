@@ -1,0 +1,143 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	background-color: lightblue;
+	background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/imgs/code.jpg");
+	overflow-x: hidden;
+}
+
+h1 {	
+	font-family: Courier, sans-serif;	
+	color: white;
+	font-size: 150px;
+}
+h2 {	
+	font-family: Courier, sans-serif;	
+	color: white;
+	font-size: 50px;
+}
+
+
+a {	
+	font-family: Courier,  sans-serif;	
+	color: white;
+	font-size: 30px;
+}
+
+.load {
+	height: 100%;
+	background-image: linear-gradient(#87A3E5, #3267E5);
+	opacity: 0.7;
+	position: relative;
+	z-index: 1;
+}
+
+.titleScreen {
+}
+
+.bgGreen {
+
+	background-color: rgb(50,205,50,0.4);
+	position: absolute;
+}
+
+.cur {
+	animation: cursoranim 2s infinite;
+	position: relative;
+	z-index: 3;
+	float: right;
+	
+}
+
+.loadingDot1 {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: skyblue;
+	position: absolute; bottom: 50%;left: 35%;
+	animation: loadinganim1 4s forwards;
+	font-family: Arial, sans-serif;
+	color:white;
+	text-align: center;
+	font-style: italic;
+}
+
+
+.loadingDot2 {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: skyblue;
+	animation: loadinganim2 4s forwards;
+	position: absolute; bottom: 50%;left: 40%;
+	font-family: Arial, sans-serif;
+	color:white;
+	text-align: center;
+	font-style: italic;
+}
+
+.loadingDot3 {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: skyblue;
+	animation: loadinganim1 4s forwards;
+	position: absolute; bottom: 50%;left: 45%;
+	font-family: Arial, sans-serif;
+	color:white;
+	text-align: center;
+	font-style: italic;
+}
+
+.loadingDot4 {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: skyblue;
+	animation: loadinganim2 4s forwards; 
+	font-family: Arial, sans-serif;
+	color:white;
+	position: absolute; bottom: 50%;left: 50%;
+	text-align: center;
+	font-style: italic;
+}
+
+@keyframes loadinganim1 {
+	/*center*/
+	0%{bottom: 50%;opacity:1;}
+	25%{bottom: 55%;opacity:0.8;}
+	50%{bottom: 60%;opacity:0.4;}
+	75%{bottom: 65%;opacity:0.2;}
+	100%{bottom: 70%;opacity:0;}
+	
+}
+
+@keyframes loadinganim2 {
+	/*rightmost*/
+	0%{bottom: 50%;opacity:1;}
+	25%{bottom: 45%;opacity:0.8;}
+	50%{bottom: 40%;opacity:0.4;}
+	75%{bottom: 35%;opacity:0.2;}
+	100%{bottom: 30%;opacity:0;}
+	
+}
+
+@keyframes cursoranim {
+	0%{opacity: 1;}
+	50%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes fade {
+	to {opacity: 1;}
+}
+
+.menu {
+	background-color: rgb(220,20,60,0.29);
+	width: 100%;
+	height: 10%;
+	position: fixed;
+	bottom: 0;
+}
