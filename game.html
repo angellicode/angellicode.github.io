@@ -8,29 +8,59 @@
 <embed src="March.mp3" loop="true" hidden="true" autostart="true">
 
 <div id="game"class="game">	
-	<img style="width: 800px; height:600px;"id="sky" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/sky.png"/>
+	<!--<img style="width: 800px; height:600px;"id="sky" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/sky.png"/>-->
 	<div id="blocky" class="blocky">
+	</div>
+	
+	<div class ="jumpingBlock">
 	</div>
 	
 	<div class="ground">
 		<!--<button id="move" class="button" style="position: absolute; top:70%;" onClick="moveBlocky();" >Move</button>-->
-		<button class="button" style="position: absolute; top: 70%;">Jump</button>
+		<!--<button class="button" style="position: absolute; top: 70%;">Jump</button>-->
 	</div>
 </div>
 
 <script>
-var i=0;
-var obj = document.getElementById("blocky");
-var sky_moving = document.getElementById("sky");
-function scrollSky(){
-	
-}
-//obselete
+var block = document.getElementById("blocky");
+var i =1;
+var i2 =2;
 function moveBlocky(){
-setTimeout(function(){
-	obj.style.left= (i+20);
-	i=i+4;}, 1000);
-}
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+
+  switch (event.key) {
+    case "Right": // IE/Edge specific
+    case "ArrowRight":
+		if(i <=350){
+			block.style.left = i+i;
+			i=i+5;
+		}
+		break;
+	
+	case "Up":
+	case "ArrowUp":
+		block.style.top = 55;
+		block.style.top = 58.9;
+	break;
+	
+	case "Down":
+	case "ArrowDown":
+		block.style.top = 56;
+		block.style.top = 58.9;
+	break;
+	
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+}, true);}
+
+window.moveBlocky();
 </script>
 
 </body>
