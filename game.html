@@ -12,6 +12,9 @@
 	<div id="blocky" class="blocky">
 	</div>
 	
+	<div id="meanBlock" class="meanBlock">
+	</div>
+	
 	<div class ="jumpingBlock" id="jBlock" style=" top: 30%; left: 25%;">
 	</div>
 	
@@ -56,6 +59,10 @@ window.addEventListener("keydown", function (event) {
   event.preventDefault();
 }, true);}
 
+function spawn(){
+	setTimeout(function (){document.createElement('meanBlock');}, 5000);
+}
+window.spawn();
 window.moveBlocky();
 </script>
 
