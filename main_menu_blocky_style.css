@@ -61,6 +61,15 @@ body {
 	
 }
 
+.jumpingBlock {
+	background-color: green;
+	width: 50px;
+	height: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: absolute;
+	
+}
+
 .button:hover {
 	background-color: #FFC38D;
 	animation: fadeB 0.5s;
@@ -69,6 +78,16 @@ body {
 @keyframes fadeB {
 	0% {opacity: 0.5;}
 	100% {opacity: 1;}
+}
+
+@keyframes jump {
+	0% {top: 58.9%;}
+	50%{top: 10%;}
+	100% {top: 58.9%;}
+}
+
+@keyframes pauseIt {
+	
 }
 
 h3 {	

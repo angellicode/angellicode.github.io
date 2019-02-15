@@ -12,7 +12,7 @@
 	<div id="blocky" class="blocky">
 	</div>
 	
-	<div class ="jumpingBlock">
+	<div class ="jumpingBlock" id="block1" style=" top: 30%; left: 25%;">
 	</div>
 	
 	<div class="ground">
@@ -24,7 +24,7 @@
 <script>
 var block = document.getElementById("blocky");
 var i =1;
-var i2 =2;
+var i2 =30;
 function moveBlocky(){
 window.addEventListener("keydown", function (event) {
   if (event.defaultPrevented) {
@@ -33,25 +33,16 @@ window.addEventListener("keydown", function (event) {
 
   switch (event.key) {
     case "Right": // IE/Edge specific
-    case "ArrowRight":
+    case "ArrowRight"://move right
 		if(i <=350){
 			block.style.left = i+i;
 			i=i+5;
 		}
 		break;
-	
-	case "Up":
-	case "ArrowUp":
-		block.style.top = 55;
-		block.style.top = 58.9;
-	break;
-	
-	case "Down":
-	case "ArrowDown":
-		block.style.top = 56;
-		block.style.top = 58.9;
-	break;
-	
+    case " "://jump
+		setTimeout(function(){block.style.animation="jump 2s";},2);
+		block.style.animation="pauseIt 2s";
+		break;
     default:
       return; // Quit when this doesn't handle the key event.
   }
