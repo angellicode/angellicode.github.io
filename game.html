@@ -1,53 +1,64 @@
+<!--PLATFORMER TEMPLATE-->
+<!--CODE  WRITTEN BY ANGELLICA B. 2019-->
 <html>
-<head>
+<head><!--STYLE SHEETS AND TITLE GO HERE-->
 	<title>Blocky Survives! 2 - Online Game</title>
 	<link rel="stylesheet" href="main_menu_blocky_style.css"/>
 </head>
 <body>
 
+<!--MUSIC CODE USING 'EMBED' TO BE HIDDEN-->
 <embed src="March.mp3" loop="true" hidden="true" autostart="true">
 
+<!--GAME WINDOW-->
 <div id="game"class="game">	
 	<!--<img style="width: 800px; height:600px;"id="sky" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/sky.png"/>-->
+	<!--CHARACTER INIT-->
 	<div id="blocky" class="blocky">
 	</div>
 	
+	<!--MEAN BLOCK INIT-->
 	<div id="meanBlock" class="meanBlock">
 	</div>
 	
+	<!--JUMPING BLOCK INIT FOR BLOCKY TO JUMP ON-->
 	<div class ="jumpingBlock" id="jBlock" style=" top: 30%; left: 25%;">
 	</div>
 	
+	<!--ROCKET TO THROW AT MEAN BLOCK-->
 	<div class ="rocket" id="rocket">
 	</div>
 	
+	<!--GROUND-->
 	<div class="ground">
 		<!--<button id="move" class="button" style="position: absolute; top:70%;" onClick="moveBlocky();" >Move</button>-->
 		<!--<button class="button" style="position: absolute; top: 70%;">Jump</button>-->
 	</div>
 </div>
 
+<!--JAVASCRIPT CODE PART-->
 <script>
-var block = document.getElementById("blocky");
-var i =1;
-var i2 =30;
-var jBlock =document.getElementById("jBlock");
+//DECLARE VARIABLES
+var block = document.getElementById("blocky");//CREATE BLOCKY INSTANCE
+var i =1;//FOR THE RIGHT MOVEMENTS
+var jBlock =document.getElementById("jBlock");//CREATE JUMPING BLOCK INSTANCE
 
-function moveBlocky(){
-window.addEventListener("keydown", function (event) {
+function moveBlocky(){//THE FUNCTION TO MOVE BLOCKY
+window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE WINDOW
   if (event.defaultPrevented) {
     return; // Do nothing if the event was already processed
   }
 
   switch (event.key) {
-    case "Right": // IE/Edge specific
+	
+	case "Right": // IE/Edge specific
     case "ArrowRight"://move right
 		if(i <=350){
 			block.style.left = i+i;
 			i=i+5;
 		}
 		break;
-    case " "://jump
+    case " "://jump SPACE BAR
 		setTimeout(function(){block.style.animation="jump 2s";},2);
 		block.style.animation="pauseIt 2s";
 		break;
@@ -58,11 +69,7 @@ window.addEventListener("keydown", function (event) {
   // Cancel the default action to avoid it being handled twice
   event.preventDefault();
 }, true);}
-
-function spawn(){
-	setTimeout(function (){document.createElement('meanBlock');}, 5000);
-}
-window.spawn();
+//GET THE WINDOW TO ACTIVATE THE FUNCTION
 window.moveBlocky();
 </script>
 

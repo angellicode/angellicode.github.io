@@ -1,20 +1,26 @@
+<!--PLATFORMER TEMPLATE-->
+<!--CODE  WRITTEN BY ANGELLICA B. 2019-->
 <html>
-<head>
+<head><!--STYLE SHEETS AND TITLE GO HERE-->
 	<title>Blocky Survives! 2 - Online Game</title>
 	<link rel="stylesheet" href="main_menu_blocky_style.css"/>
 </head>
 <body>
 
+<!--MUSIC CODE USING 'EMBED' TO BE HIDDEN-->
 <embed src="March.mp3" loop="true" hidden="true" autostart="true">
 
+<!--GAME WINDOW-->
 <div class="about">
 	<h3 id="desc" style="left:45%; position: absolute; top:20%;"></h3>
 	<a href="game.html" class="button" style="position: absolute; right:20%; top:90%;">Start Game</a>
 </div>
 
+<!--JAVASCRIPT CODE PART-->
 <script>
 var Words="Blocky needs your help! He is trying to cross the pathway towards his homeland. But, the MeanBlocks are preventing him from doing so. With your help, Blocky can defeat the MeanBlocks and get to his homeland. Press the 'L' button on the keyboard to launch a rocket at any blue MeanBlocks, but don't get hit!"
 var i = 0;
+//A FUNCTION TO TYPE ALL THE WORDS
 function typeWords(){
 if (i < Words.length ){
 	document.getElementById("desc").innerHTML += Words.charAt(i);
@@ -22,7 +28,7 @@ if (i < Words.length ){
 	setTimeout(typeWords, 50);
 }
 }
-
+//GET THE WINDOW TO TYPE THE WORDS
 window.typeWords();
 </script>
 
