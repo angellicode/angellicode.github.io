@@ -12,7 +12,10 @@
 	<div id="blocky" class="blocky">
 	</div>
 	
-	<div class ="jumpingBlock" id="block1" style=" top: 30%; left: 25%;">
+	<div class ="jumpingBlock" id="jBlock" style=" top: 30%; left: 25%;">
+	</div>
+	
+	<div class ="rocket" id="rocket">
 	</div>
 	
 	<div class="ground">
@@ -25,6 +28,8 @@
 var block = document.getElementById("blocky");
 var i =1;
 var i2 =30;
+var jBlock =document.getElementById("jBlock");
+
 function moveBlocky(){
 window.addEventListener("keydown", function (event) {
   if (event.defaultPrevented) {
