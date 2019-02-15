@@ -24,7 +24,7 @@ body {
 	position: absolute; 
 	left: 20%; 
 	background-color: orange;
-	/*background-image: url("C:/Users/School234/Documents/GitHub/angellicode.github.io/sky.png");*/
+	background-image: url("/sky.png");
 	width: 800px;
 	height: 600px;
 }
