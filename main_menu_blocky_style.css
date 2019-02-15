@@ -14,6 +14,13 @@ body {
 	background-image: url("/blocky_menu.gif");
 }
 
+.topBar {
+	position: absolute;  
+	background-color: rgb(128,0,0,0.5);
+	width: 800px;
+	height: 10%;
+}
+
 .about {
 	position: absolute; 
 	left: 20%; 
