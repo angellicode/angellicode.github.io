@@ -16,21 +16,19 @@
 	<!--<img class="cur" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/imgs/cursor_smallest.png"/>-->
 </div>
 
-<div class="aboutBox">
-	<h2 id="copyright" style="float:left;font-size:25px;z-index: 1;position:relative;"></h2>
+<div class="aboutBox" style="top: 80%;">
+	<h2 id="copyright" style="float:left;font-size:25px;z-index: 1;position:relative;">Website © Angellica Brown 2019 - Design and Code</h2>
 	<!--<img class="cur" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/imgs/cursor_smallest.png"/>-->
 </div>
 
 <script>
 var LogoWords="About";
 var AboutScript="Angellica Brown is a kind individual who wants to share her passion of technology with the world. She learned what endless possibilities computing had in store when she discovered coding at a young age. Also being an artist, Angellica fell in love with using the computer to create art that can inspire many. She is a firm believer in love, peace and justice. In her spare time, Angellica can be found coding, drawing, doing schoolwork, designing or hanging out with family and friends.";
-var copr = "Website © Angellica Brown 2019 - Design and Code";
 var i = 0;
 function typeWords(){
 if (i < AboutScript.length ){
 	document.getElementById("logo").innerHTML += LogoWords.charAt(i);
 	document.getElementById("aboutWords").innerHTML += AboutScript.charAt(i);
-	document.getElementById("copyright").innerHTML += copr.charAt(i);
 	i++;
 	setTimeout(typeWords, 50);
 }
