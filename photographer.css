@@ -18,6 +18,15 @@ h2 {
 	position: absolute;
 }
 
+p {
+	font-family: 'Noto Sans TC', sans-serif;
+	color: white;
+	font-size: 17px;
+	top: 30%;
+	left: 2%;
+	position: absolute;
+}
+
 h3 {
 	font-family: 'Pacifico', cursive;
 	color: white;
