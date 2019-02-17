@@ -38,6 +38,7 @@ a {
 
 .cur {
 	animation: cursoranim 2s infinite;
+	-webkit-animation: cursoranim 2s infinite;
 	position: relative;
 	z-index: 3;
 	float: right;
@@ -84,3 +85,8 @@ a {
 .portfolioTwo:hover {
 	background-color: rgb(250,81,191);
 }
+
+.portfolioOne:hover {
+	background-color: rgb(99,227,130);
+}
+

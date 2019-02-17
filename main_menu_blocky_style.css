@@ -71,6 +71,17 @@ body {
 	
 }
 
+.rocket {
+	background-color: blue;
+	width: 20px;
+	height: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: absolute;
+	border-radius: 50%;
+	/*animation: launchRocket 4s;*/
+	
+}
+
 .meanBlock{
 	background-color: blue;
 	width: 50px;
@@ -114,6 +125,15 @@ body {
 }
 
 @keyframes meanBlockWalk {
+	
+	0%{right: 0;}
+	25%{right: 100;}
+	50%{right: 250;}
+	75%{right: 350;}
+	100%{right: 500;}
+}
+
+@keyframes launchRocket {
 	
 	0%{right: 0;}
 	25%{right: 100;}

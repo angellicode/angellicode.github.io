@@ -13,8 +13,12 @@
 <!--GAME WINDOW-->
 <div id="game"class="game">	
 	<!--<img style="width: 800px; height:600px;"id="sky" src="C:/Users/School234/Documents/GitHub/angellicode.github.io/sky.png"/>-->
+	
 	<!--CHARACTER INIT-->
 	<div id="blocky" class="blocky">
+	</div>
+	
+	<div id="rocket" class="rocket">
 	</div>
 	
 	<!--MEAN BLOCK INIT-->
@@ -47,6 +51,17 @@
 var block = document.getElementById("blocky");//CREATE BLOCKY INSTANCE
 var i =1;//FOR THE RIGHT MOVEMENTS
 var jBlock =document.getElementById("jBlock");//CREATE JUMPING BLOCK INSTANCE
+var divN = document.createElement("div");//CREATE DIV INSTANCE
+var nrocket = document.getElementById("rocket");//CREATE ROCKET INSTANCE
+
+function launchRocket(){
+	var blockyStyleGetter = window.getComputedStyle(block);
+	var blockyXPosition = blockyStyleGetter.getPropertyValue('left');//gets blocky's xposition
+	
+	document.body.insertBefore(nrocket, block);//add a rocket;
+	
+	
+}
 
 function moveBlocky(){//THE FUNCTION TO MOVE BLOCKY
 window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE WINDOW
@@ -67,6 +82,11 @@ window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE 
 		setTimeout(function(){block.style.animation="jump 2s";},2);
 		block.style.animation="pauseIt 2s";
 		break;
+	
+	case "L":
+	case "KeyL"://Launch rocket
+		setTimeout(launchRocket(),2);
+		break;
     default:
       return; // Quit when this doesn't handle the key event.
   }
@@ -74,6 +94,7 @@ window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE 
   // Cancel the default action to avoid it being handled twice
   event.preventDefault();
 }, true);}
+
 //GET THE WINDOW TO ACTIVATE THE FUNCTION
 window.moveBlocky();
 </script>
