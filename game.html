@@ -74,8 +74,8 @@ function launchRocket (){//THE FUNCTION TO LAUNCH THE ROCKET
 	nrocket.style.visibility = "visible";
 	counter = 1;
 	function resetMeanBlock(){
-		//setTimeout(function(){mblock.style.animation="pauseIt 1s";},2);
-		mblock.style.animation="meanBlockWalk 2s";
+		mblock.style.animation="meanBlockWalk 3s";
+		mblock.style.visibility="visible";
 	}
 	
 	function rocketAnim (){
@@ -84,7 +84,7 @@ function launchRocket (){//THE FUNCTION TO LAUNCH THE ROCKET
 		nrocket.style.visibility = "hidden";
 		points++;
 		document.getElementById("points").innerHTML = pointsW + points;
-		window.resetMeanBlock();
+		resetMeanBlock();
 	}else if( counter == 750){
 		clearInterval(intervalS);
 		nrocket.style.visibility = "hidden";
