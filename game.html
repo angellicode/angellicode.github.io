@@ -18,11 +18,11 @@
 	<div id="blocky" class="blocky">
 	</div>
 	
-	<div id="rocket" class="rocket">
+	<div id="rockett" class="rocket">
 	</div>
 	
 	<!--MEAN BLOCK INIT-->
-	<div id="meanBlock" class="meanBlock">
+	<div id="meanBlock" class="mmeanBlock">
 	</div>
 	
 	<!--JUMPING BLOCK INIT FOR BLOCKY TO JUMP ON-->
@@ -31,7 +31,7 @@
 	
 	<div class="topBar">
 		<h3 style="font-family: Arial, sans-serif; color: white; float: right;">LIVES: 3</h3>
-		<h3 style="font-family: Arial, sans-serif; color: white; float: left;">POINTS: 0</h3>
+		<h3 style="font-family: Arial, sans-serif; color: white; float: left;" id="points">POINTS: 0</h3>
 	</div>
 	
 	<!--ROCKET TO THROW AT MEAN BLOCK-->
@@ -49,21 +49,54 @@
 <script>
 //DECLARE VARIABLES
 var block = document.getElementById("blocky");//CREATE BLOCKY INSTANCE
+var mblock = document.getElementById("meanBlock");//CREATE BLOCKY INSTANCE
 var i =1;//FOR THE RIGHT MOVEMENTS
 var jBlock =document.getElementById("jBlock");//CREATE JUMPING BLOCK INSTANCE
-var divN = document.createElement("div");//CREATE DIV INSTANCE
 var nrocket = document.getElementById("rocket");//CREATE ROCKET INSTANCE
+var pointsW = "POINTS: ";
+var points = 0;
+//Blocky's position
+var blocky_style_getter = window.getComputedStyle(block, null);
+var blocky_positionX = blocky_style_getter.getPropertyValue('left');
 
-function launchRocket(){
-	var blockyStyleGetter = window.getComputedStyle(block);
-	var blockyXPosition = blockyStyleGetter.getPropertyValue('left');//gets blocky's xposition
+//Rocket position
+var rocket_style_getter = window.getComputedStyle(nrocket, null);
+var rocket_positionX = rocket_style_getter.getPropertyValue('left');
+
+var counter = 1;
+
+//Mean Block position
+var mblock_style_getter = window.getComputedStyle(mblock, null);
+var mblock_positionX = mblock_style_getter.getPropertyValue('right');
+
+function launchRocket (){//THE FUNCTION TO LAUNCH THE ROCKET
+	var intervalS = setInterval(rocketAnim, 0.3);
+	nrocket.style.visibility = "visible";
+	counter = 1;
+	function resetMeanBlock(){
+		//setTimeout(function(){mblock.style.animation="pauseIt 1s";},2);
+		mblock.style.animation="meanBlockWalk 2s";
+	}
 	
-	document.body.insertBefore(nrocket, block);//add a rocket;
-	
-	
+	function rocketAnim (){
+	if (counter == 300){
+		clearInterval(intervalS);
+		nrocket.style.visibility = "hidden";
+		points++;
+		document.getElementById("points").innerHTML = pointsW + points;
+		window.resetMeanBlock();
+	}else if( counter == 750){
+		clearInterval(intervalS);
+		nrocket.style.visibility = "hidden";
+	}else{
+		counter++;
+		nrocket.style.left = counter;
+		nrocket.style.top = "60%";
+	}
+	}
 }
-
 function moveBlocky(){//THE FUNCTION TO MOVE BLOCKY
+nrocket.style.visibility = "hidden";
 window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE WINDOW
   if (event.defaultPrevented) {
     return; // Do nothing if the event was already processed
@@ -73,7 +106,7 @@ window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE 
 	
 	case "Right": // IE/Edge specific
     case "ArrowRight"://move right
-		if(i <=350){
+		if(i <=250){
 			block.style.left = i+i;
 			i=i+5;
 		}
@@ -83,10 +116,11 @@ window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE 
 		block.style.animation="pauseIt 2s";
 		break;
 	
-	case "L":
-	case "KeyL"://Launch rocket
-		setTimeout(launchRocket(),2);
+	case "l"://Launch rocket
+		nrocket.style.visibility = "visible";
+		launchRocket();
 		break;
+		
     default:
       return; // Quit when this doesn't handle the key event.
   }
@@ -97,6 +131,7 @@ window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE 
 
 //GET THE WINDOW TO ACTIVATE THE FUNCTION
 window.moveBlocky();
+
 </script>
 
 </body>

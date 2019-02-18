@@ -75,14 +75,15 @@ body {
 	background-color: blue;
 	width: 20px;
 	height: 20px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	position: absolute;
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 	border-radius: 50%;
+	left: 0;
+	position: absolute;
 	/*animation: launchRocket 4s;*/
 	
 }
 
-.meanBlock{
+.mmeanBlock{
 	background-color: blue;
 	width: 50px;
 	height: 50px;
@@ -125,6 +126,15 @@ body {
 }
 
 @keyframes meanBlockWalk {
+	
+	0%{right: 0;}
+	25%{right: 100;}
+	50%{right: 250;}
+	75%{right: 350;}
+	100%{right: 500;}
+}
+
+@keyframes meanBlockWalk2 {
 	
 	0%{right: 0;}
 	25%{right: 100;}
