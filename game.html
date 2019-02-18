@@ -64,19 +64,27 @@ var rocket_style_getter = window.getComputedStyle(nrocket, null);
 var rocket_positionX = rocket_style_getter.getPropertyValue('left');
 
 var counter = 1;
-
+var counter2 = 1;
 //Mean Block position
 var mblock_style_getter = window.getComputedStyle(mblock, null);
 var mblock_positionX = mblock_style_getter.getPropertyValue('right');
+
+
+function meanBlockWalk (){
+	var interval2 = setInterval(walkAnim, 0.3);
+	counter2 = 0;
+	function walkAnim (){
+		if(counter2 < 490){
+		counter2++;
+		mblock.style.right = counter2;}
+	}
+
+}
 
 function launchRocket (){//THE FUNCTION TO LAUNCH THE ROCKET
 	var intervalS = setInterval(rocketAnim, 0.3);
 	nrocket.style.visibility = "visible";
 	counter = 1;
-	function resetMeanBlock(){
-		mblock.style.animation="meanBlockWalk 3s";
-		mblock.style.visibility="visible";
-	}
 	
 	function rocketAnim (){
 	if (counter == 300){
@@ -84,7 +92,7 @@ function launchRocket (){//THE FUNCTION TO LAUNCH THE ROCKET
 		nrocket.style.visibility = "hidden";
 		points++;
 		document.getElementById("points").innerHTML = pointsW + points;
-		resetMeanBlock();
+		meanBlockWalk();
 	}else if( counter == 750){
 		clearInterval(intervalS);
 		nrocket.style.visibility = "hidden";
@@ -131,7 +139,7 @@ window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE 
 
 //GET THE WINDOW TO ACTIVATE THE FUNCTION
 window.moveBlocky();
-
+window.meanBlockWalk();
 </script>
 
 </body>
