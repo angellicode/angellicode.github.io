@@ -21,6 +21,9 @@
 	<div id="rockett" class="rocket">
 	</div>
 	
+	<div id="rocket2" class="rocket">
+	</div>
+	
 	<!--MEAN BLOCK INIT-->
 	<div id="meanBlock" class="mmeanBlock">
 	</div>
@@ -30,7 +33,7 @@
 	</div>
 	
 	<div class="topBar">
-		<h3 style="font-family: Arial, sans-serif; color: white; float: right;">LIVES: 3</h3>
+		<h3 style="font-family: Arial, sans-serif; color: white; float: right;" id="liv">LIVES: 3</h3>
 		<h3 style="font-family: Arial, sans-serif; color: white; float: left;" id="points">POINTS: 0</h3>
 	</div>
 	
@@ -53,8 +56,12 @@ var mblock = document.getElementById("meanBlock");//CREATE BLOCKY INSTANCE
 var i =1;//FOR THE RIGHT MOVEMENTS
 var jBlock =document.getElementById("jBlock");//CREATE JUMPING BLOCK INSTANCE
 var nrocket = document.getElementById("rocket");//CREATE ROCKET INSTANCE
+var mbrocket = document.getElementById("rocket2");//CREATE mb ROCKET INSTANCE
 var pointsW = "POINTS: ";
 var points = 0;
+
+var livesW = "LIVES: ";
+var lives = 3;
 //Blocky's position
 var blocky_style_getter = window.getComputedStyle(block, null);
 var blocky_positionX = blocky_style_getter.getPropertyValue('left');
@@ -65,10 +72,34 @@ var rocket_positionX = rocket_style_getter.getPropertyValue('left');
 
 var counter = 1;
 var counter2 = 1;
+var counter3 = 1;
 //Mean Block position
 var mblock_style_getter = window.getComputedStyle(mblock, null);
 var mblock_positionX = mblock_style_getter.getPropertyValue('right');
 
+function meanBlockThrow (){
+	var interval3 = setInterval(throwAnim, 0.3);
+	counter3 = 310;
+	function throwAnim (){
+		if(counter3 >= 0){
+			mbrocket.style.visibility = "visible";
+			counter3--;
+			mbrocket.style.left = counter3;
+			mbrocket.style.top = "60%";
+		}
+		if (counter3 == 0){
+			meanBlockWalk();
+			lives--;
+			document.getElementById("liv").innerHTML = livesW + lives;
+			
+		}
+		if (lives == 0){
+			//game over
+			location.replace("main_menu_blocky.html");
+		}
+	}
+
+}
 
 function meanBlockWalk (){
 	var interval2 = setInterval(walkAnim, 0.3);
@@ -77,12 +108,17 @@ function meanBlockWalk (){
 		if(counter2 < 490){
 		counter2++;
 		mblock.style.right = counter2;}
+		
+		if (counter2 == 489){
+			meanBlockThrow();
+		}
 	}
-
 }
 
+
+
 function launchRocket (){//THE FUNCTION TO LAUNCH THE ROCKET
-	var intervalS = setInterval(rocketAnim, 0.3);
+	var intervalS = setInterval(rocketAnim, 0.1);
 	nrocket.style.visibility = "visible";
 	counter = 1;
 	
