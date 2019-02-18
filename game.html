@@ -81,6 +81,7 @@ function meanBlockThrow (){
 	var interval3 = setInterval(throwAnim, 0.3);
 	counter3 = 310;
 	function throwAnim (){
+	if(counter != 300){
 		if(counter3 >= 0){
 			mbrocket.style.visibility = "visible";
 			counter3--;
@@ -96,6 +97,7 @@ function meanBlockThrow (){
 		if (lives == 0){
 			//game over
 			location.replace("main_menu_blocky.html");
+		}
 		}
 	}
 
