@@ -46,6 +46,8 @@
 		<!--<button id="move" class="button" style="position: absolute; top:70%;" onClick="moveBlocky();" >Move</button>-->
 		<!--<button class="button" style="position: absolute; top: 70%;">Jump</button>-->
 	</div>
+	
+	<img  id= "g_o" style="left:20%; top: 20%; position: absolute; visibility: hidden"src="C:/Users/School234/Documents/GitHub/angellicode.github.io/game_over.png"/>
 </div>
 
 <!--JAVASCRIPT CODE PART-->
@@ -59,6 +61,7 @@ var nrocket = document.getElementById("rocket");//CREATE ROCKET INSTANCE
 var mbrocket = document.getElementById("rocket2");//CREATE mb ROCKET INSTANCE
 var pointsW = "POINTS: ";
 var points = 0;
+var game_over = document.getElementById("g_o");
 
 var livesW = "LIVES: ";
 var lives = 3;
@@ -96,7 +99,9 @@ function meanBlockThrow (){
 		}
 		if (lives == 0){
 			//game over
-			location.replace("main_menu_blocky.html");
+			game_over.style.visibility="visible";
+			counter3 = -1;
+			setTimeout(function(){location.replace("main_menu_blocky.html");},5000);
 		}
 		}
 	}
@@ -158,8 +163,8 @@ window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE 
 		}
 		break;
     case " "://jump SPACE BAR
-		setTimeout(function(){block.style.animation="jump 2s";},2);
-		block.style.animation="pauseIt 2s";
+		setTimeout(function(){block.style.animation="jump 2s";},1);
+		block.style.animation="pauseIt 1s";
 		break;
 	
 	case "l"://Launch rocket
