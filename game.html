@@ -136,6 +136,7 @@ function launchRocket (){//THE FUNCTION TO LAUNCH THE ROCKET
 		nrocket.style.visibility = "hidden";
 		points++;
 		document.getElementById("points").innerHTML = pointsW + points;
+		clearInterval(intervalS);
 		meanBlockWalk();
 	}else if( counter == 750){
 		clearInterval(intervalS);
