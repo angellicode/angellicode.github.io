@@ -16,7 +16,7 @@ body {
 
 .topBar {
 	position: absolute;  
-	background-color: rgb(128,0,0,0.5);
+	background-color: rgba(128,0,0,0.5);
 	width: 800px;
 	height: 10%;
 }
