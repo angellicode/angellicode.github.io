@@ -18,6 +18,10 @@
 	<div id="blocky" class="blocky">
 	</div>
 	
+	<!--BLOCKER INIT-->
+	<div id="blocker" class="blocker">
+	</div>
+	
 	<div id="rockett" class="rocket">
 	</div>
 	
@@ -62,6 +66,7 @@ var mbrocket = document.getElementById("rocket2");//CREATE mb ROCKET INSTANCE
 var pointsW = "POINTS: ";
 var points = 0;
 var game_over = document.getElementById("g_o");
+var blkr = document.getElementById("blocker");
 
 var livesW = "LIVES: ";
 var lives = 3;
@@ -76,38 +81,12 @@ var rocket_positionX = rocket_style_getter.getPropertyValue('left');
 var counter = 1;
 var counter2 = 1;
 var counter3 = 1;
+var blockyCounter = 1;
+var blockyJCounter = 1;
 //Mean Block position
 var mblock_style_getter = window.getComputedStyle(mblock, null);
 var mblock_positionX = mblock_style_getter.getPropertyValue('right');
-
-function meanBlockThrow (){
-	var interval3 = setInterval(throwAnim, 0.3);
-	counter3 = 310;
-	function throwAnim (){
-	if(counter != 300){
-		if(counter3 >= 0){
-			mbrocket.style.visibility = "visible";
-			counter3--;
-			mbrocket.style.left = counter3;
-			mbrocket.style.top = "60%";
-		}
-		if (counter3 == 0){
-			meanBlockWalk();
-			lives--;
-			document.getElementById("liv").innerHTML = livesW + lives;
-			
-		}
-		if (lives == 0){
-			//game over
-			game_over.style.visibility="visible";
-			counter3 = -1;
-			setTimeout(function(){location.replace("main_menu_blocky.html");},5000);
-		}
-		}
-	}
-
-}
-
+var blockerIsOn = "false";
 function meanBlockWalk (){
 	var interval2 = setInterval(walkAnim, 0.3);
 	counter2 = 0;
@@ -123,6 +102,63 @@ function meanBlockWalk (){
 	}
 }
 
+function blockyWalk (){
+	if(blockyCounter <= 120){
+	blockyCounter=blockyCounter+5;
+	block.style.left = blockyCounter;}
+}
+
+function blockyJumper (){
+	var interval4 = setInterval(jumpBlocky,0.3);
+	blockyJCounter = 350;
+	function jumpBlocky(){
+	if(blockyJCounter <= 350 && blockyJCounter >= 200){
+		if(blockyJCounter == 200 && blockyJCounter != 350){
+			blockyJCounter++;
+			block.style.top = blockyJCounter;
+		}else {
+			clearInterval(interval4);
+		}
+		blockyJCounter--;
+		block.style.top = blockyJCounter;
+		
+	}
+	
+	}
+}
+
+function meanBlockThrow (){
+	var interval3 = setInterval(throwAnim, 0.3);
+	counter3 = 310;
+	function throwAnim (){
+	if(counter != 300){
+		if(counter3 >= 0){
+			mbrocket.style.visibility = "visible";
+			counter3--;
+			mbrocket.style.left = counter3;
+			mbrocket.style.top = "60%";
+		}
+		if (blockerIsOn == "false" && counter3 == 0){
+			meanBlockWalk();
+			lives--;
+			document.getElementById("liv").innerHTML = livesW + lives;
+			
+		}else if (blockerIsOn == "true"){
+			lives = lives;
+			meanBlockWalk();
+		
+		}
+		if (lives == 0){
+			//game over
+			game_over.style.visibility="visible";
+			counter3 = -1;
+			setTimeout(function(){location.replace("main_menu_blocky.html");},5000);
+		}
+		//meanBlockWalk();
+		}
+	}
+
+}
 
 
 function launchRocket (){//THE FUNCTION TO LAUNCH THE ROCKET
@@ -159,19 +195,38 @@ window.addEventListener("keydown", function (event) {//ADD A KEYLISTENER TO THE 
 	
 	case "Right": // IE/Edge specific
     case "ArrowRight"://move right
-		if(i <=250){
+		//if(i <=250){
+			//block.style.left = i+i;
+			//i=i+5;
+		//}
+		blockyWalk();
+		break;
+		
+	case "Left": // IE/Edge specific
+    case "ArrowLeft"://move right
+		i = 0;
+		if(i >=0){
 			block.style.left = i+i;
 			i=i+5;
 		}
 		break;
+		
     case " "://jump SPACE BAR
 		setTimeout(function(){block.style.animation="jump 2s";},1);
 		block.style.animation="pauseIt 1s";
+		//blockyJumper();
 		break;
 	
 	case "l"://Launch rocket
 		nrocket.style.visibility = "visible";
 		launchRocket();
+		break;
+	case "b"://start blocker
+		blockerIsOn = "true"
+		blkr.style.visibility="visible";
+		blkr.style.top = "58.9%";
+		//blockerIsOn = "false";
+		
 		break;
 		
     default:

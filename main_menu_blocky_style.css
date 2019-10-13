@@ -67,8 +67,19 @@ body {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	position: absolute;
 	left:0;
-	top: 58.9%;
+	top: 350;
 	
+}
+
+.blocker {
+	background-color: green;
+	width: 10px;
+	height: 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: absolute;
+	left:0;
+	top: 0;	
+	visibility: hidden;
 }
 
 .rocket {
