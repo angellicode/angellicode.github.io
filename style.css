@@ -35,7 +35,7 @@ a {
 
 .bgGreen {
 
-	background-color: rgb(50,205,50,0.4);
+	background-color: rgba(50,205,50,0.4);
 	position: absolute;
 }
 
@@ -136,7 +136,7 @@ a {
 }
 
 .menu {
-	background-color: rgb(220,20,60,0.29);
+	background-color: rgba(220,20,60,0.29);
 	width: 100%;
 	height: 10%;
 	position: fixed;

@@ -26,7 +26,7 @@ a {
 }
 
 .menu {
-	background-color: rgb(220,20,60,0.29);
+	background-color: rgba(220,20,60,0.29);
 	width: 100%;
 	height: 10%;
 	position: fixed;
@@ -50,12 +50,12 @@ a {
 
 .bgGreen {
 
-	background-color: rgb(50,205,50,0.5);
+	background-color: rgba(50,205,50,0.5);
 	position: absolute;
 }
 
 .portfolioOne {
-	background-color: rgb(99,227,130,0.8);
+	background-color: rgba(99,227,130,0.8);
 	position: absolute;
 	left: 5%;
 	bottom: 20%;
@@ -74,13 +74,13 @@ a {
 }
 
 .portfolioOne:hover {
-	background-color: rgb(99,227,130);
+	background-color: rgba(99,227,130);
 }
 
 .portfolioTwo:hover {
-	background-color: rgb(250,81,191);
+	background-color: rgba(250,81,191);
 }
 
 .aboutBox {
-	background-color: rgb(49,108,49,0.8);position:absolute;top:39%;
+	background-color: rgba(49,108,49,0.8);position:absolute;top:39%;
 }
