@@ -79,14 +79,14 @@ a {
 }
 
 .portfolioOne:hover {
-	background-color: rgba(99,227,130);
+	background-color: rgba(250,81,191);
 }
 
 .portfolioTwo:hover {
 	background-color: rgba(250,81,191);
 }
 
-.portfolioOne:hover {
-	background-color: rgba(99,227,130);
+.portfolioThree:hover {
+	background-color: rgba(250,81,191);
 }
 
