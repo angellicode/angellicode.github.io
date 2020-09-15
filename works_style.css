@@ -55,27 +55,27 @@ a {
 	background-color: rgba(99,227,130,0.8);
 	position: absolute;
 	left: 5%;
-	bottom: 20%;
+	bottom: 40%;
 	width: 300px;
-	height: 250px;
+	height: 100px;
 }
 
 .portfolioTwo {
 	background-color: rgba(250,232,81,0.8);
 	position: absolute;
 	left: 35%;
-	bottom: 20%;
+	bottom: 40%;
 	width: 300px;
-	height: 250px;
+	height: 100px;
 }
 
 .portfolioThree {
 	background-color: rgba(99,227,130,0.8);
 	position: absolute;
 	left: 65%;
-	bottom: 20%;
+	bottom: 40%;
 	width: 300px;
-	height: 250px;
+	height: 100px;
 }
 
 .portfolioOne:hover {
