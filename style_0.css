@@ -1,5 +1,5 @@
 body {
-	background-color: white;
+	background-color: lightblue;
 	background-image: url("/code.jpg");
 	overflow-x: hidden;
 }
@@ -17,13 +17,9 @@ h2 {
 
 
 a {	
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;	
-	color:black;
-	font-size: 35px;
-}
-
-a:hover {
-	color:gray;
+	font-family: Courier,  sans-serif;	
+	color: white;
+	font-size: 30px;
 }
 
 .load {
@@ -140,11 +136,9 @@ a:hover {
 }
 
 .menu {
-	background-color:rgb(216, 240, 128);
+	background-color: rgba(220,20,60,0.29);
 	width: 100%;
-	height: 5%;
-	left: 0;
+	height: 10%;
 	position: fixed;
-	top:10%;
-
+	bottom: 0;
 }
